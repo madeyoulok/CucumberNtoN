@@ -35,18 +35,18 @@ public class NewCustomerPageObject {
 	By Status = By.className("form-control");
 	By StatusActive = By.xpath("//option[contains(text(),'Active')]");
 	By StatusInActive = By.xpath("//option[contains(text(),'Inactive')]");
-	By ClickAddCustomer = By.xpath("//button[@class='btn btn-primary']");
-	By AddAddres = By.className("btn btn-block btn-primary");
+	By SubmitAddCustomer = By.xpath("//button[@class='btn btn-primary']");
+	By AddAddres = By.xpath("//button[@class='btn btn-block btn-primary']");
 	By Street = By.id("entry_street_address");
 	By Zip = By.id("entry_postcode");
 	By City = By.xpath("//input[@id='entry_city']");
 	By Country = By.xpath("//select[@id='entry_country_id']");
-	By DefultShipping= By.xpath("//select[@id='is_default']");
+	By DefultShipping = By.xpath("//select[@id='is_default']");
 	By No = By.xpath("//option[contains(text(),'No')]");
 	By Yes = By.xpath("//option[contains(text(),'Yes')]");
-	
-	
-	
+	By AddButton = By.xpath("//button[@id='addAddress']");
+	By SaveButton = By.xpath("//select[@id='entry_country_id']");
+
 	public String getPageTitle() {
 		return driver.getTitle();
 	}
@@ -71,7 +71,7 @@ public class NewCustomerPageObject {
 
 	public void SetLastName(String LName) {
 		driver.findElement(LastName).sendKeys(LName);
-		
+
 	}
 
 	public void SetGender(String gender) {
@@ -118,32 +118,60 @@ public class NewCustomerPageObject {
 			driver.findElement(StatusActive).click();
 		}
 	}
+	public void Submit() throws Exception {
+		driver.findElement(SubmitAddCustomer).click();
+		Thread.sleep(2000);
+	}
+
 	public void ClickAddAddress() {
 		driver.findElement(AddAddres).click();
 	}
+
 	public void SetStreet(String street) {
 		driver.findElement(Street).sendKeys(street);
 	}
+
 	public void SetZip(String zip) {
 		driver.findElement(Zip).sendKeys(zip);
 	}
+
 	public void SetCity(String city) {
 		driver.findElement(City).sendKeys(city);
 	}
+
 	public void SetCountry(String country) {
-		Select ss = (Select) driver.findElement(Country);
-		List<WebElement> st = ss.getOptions();
-		Iterator<WebElement> it = st.iterator();
-		While(it.hasNext()){
-			String ct = it.next().getCssValue(country);
-			if(ct.equals(country)) {
-				country.
-			}
+		WebElement hh = driver.findElement(Country);
+		Select ss = new Select(hh);
+		ss.selectByVisibleText(country);
+	}
+	
+
+	public void SetDefultShipping(String y) throws Exception {
+		Thread.sleep(2000);
+	    driver.findElement(DefultShipping).click();
+	    Thread.sleep(1000);
+	    WebElement ee = driver.findElement(No);
+	    WebElement rr = driver.findElement(Yes);
+		if(y.equals(rr)) {
+			driver.findElement(Yes).click();
+		}else if(y.equals(ee)) {
+			driver.findElement(No).click();
+		}else {
+			driver.findElement(Yes).click();
 		}
+		
 	}
 
-	public void Submit() {
-		driver.findElement(ClickAddCustomer).click();
+	public void ClickAddButton() throws Exception {
+		Thread.sleep(1000);
+		driver.findElement(AddButton).click();
+	}
+
+
+
+	public void ClickSaveButton() throws Exception {
+		Thread.sleep(1000);
+		driver.findElement(SaveButton).click();
 	}
 
 }

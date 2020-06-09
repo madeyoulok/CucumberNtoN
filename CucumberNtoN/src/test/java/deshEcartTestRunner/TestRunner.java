@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
          (
         	features=".//Features/Customers.feature",	
         	glue = "stepDefinition",
-        	dryRun = true,
+        	dryRun = false,
         	monochrome = true,
         	plugin = {"pretty","html:Test-Output"}      
         		 
@@ -19,3 +19,5 @@ import io.cucumber.junit.CucumberOptions;
 public class TestRunner {
 
 }
+
+

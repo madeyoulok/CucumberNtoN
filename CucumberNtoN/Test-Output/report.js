@@ -100,6 +100,66 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
+  "name": "User view the Add Adress page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinition.ValidLogin.user_view_the_Add_Adress_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click on Add Address Button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinition.ValidLogin.click_on_Add_Address_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User enter Address info",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinition.ValidLogin.user_enter_Address_info()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User view the Add Adress page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinition.ValidLogin.user_view_the_Add_Adress_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click on Add Button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinition.ValidLogin.click_on_Save_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Clice on Save Button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinition.ValidLogin.clice_on_Save_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
   "name": "close browser",
   "keyword": "And "
 });

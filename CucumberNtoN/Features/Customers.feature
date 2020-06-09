@@ -16,7 +16,8 @@ Scenario: Add a new customer
 	And Click on Add Address Button
 	And User enter Address info
 	Then User view the Add Adress page
-	And Click on Save Button 
+	And Click on Add Button 
+	And Clice on Save Button
 	And close browser
 	
 	
