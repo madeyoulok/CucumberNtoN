@@ -1,170 +1,103 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:Features/Customers.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:Features/UpsRefrence.feature");
 formatter.feature({
-  "name": "Customer",
+  "name": "UPS Reference Page",
   "description": "",
   "keyword": "Feature"
 });
-formatter.scenario({
-  "name": "Add a new customer",
+formatter.background({
+  "name": "",
   "description": "",
-  "keyword": "Scenario"
+  "keyword": "Background"
 });
 formatter.step({
-  "name": "User open chrome browser",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "stepDefinition.ValidLogin.user_open_chrome_browser()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Go to Url \"https://www.advanceshoppers.com/admin\"",
+  "name": "User open browser",
   "keyword": "When "
 });
 formatter.match({
-  "location": "stepDefinition.ValidLogin.go_to_Url(java.lang.String)"
+  "location": "stepDefinition.UpsRefrenceStep.user_open_browser()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User enters email as \"bdsynchronise@gmail.com\" and password as \"123456\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinition.ValidLogin.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Admin login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinition.ValidLogin.click_on_Admin_login_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User can view Deshbord",
+  "name": "User go to URL \"https://www.ups.com/us/en/Home.page\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinition.ValidLogin.user_can_view_Deshbord()"
+  "location": "stepDefinition.UpsRefrenceStep.user_go_to_URL(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click on Customers",
+  "name": "User click on Tracking",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinition.ValidLogin.click_on_Customers()"
+  "location": "stepDefinition.UpsRefrenceStep.user_click_on_Tracking()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click on Add New Customer",
+  "name": "User click on Track and History",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinition.ValidLogin.click_on_Add_New_Customer()"
+  "location": "stepDefinition.UpsRefrenceStep.user_click_on_Track_and_History()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User can view Add Customer page",
+  "name": "User click on Track by Reference",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinition.UpsRefrenceStep.user_click_on_Track_by_Reference()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Print the Country Destination List",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@TC0004"
+    },
+    {
+      "name": "@Regression"
+    }
+  ]
+});
+formatter.step({
+  "name": "User select Destination Country or Territory",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepDefinition.UpsRefrenceStep.user_select_Destination_Country_or_Territory()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User should see all the country listed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinition.ValidLogin.user_can_view_Add_Customer_page()"
+  "location": "stepDefinition.UpsRefrenceStep.user_should_see_all_the_country_listed()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User enter customer info",
+  "name": "User closed browser",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinition.ValidLogin.user_enter_customer_info()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User view the Add Adress page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinition.ValidLogin.user_view_the_Add_Adress_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Add Address Button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinition.ValidLogin.click_on_Add_Address_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User enter Address info",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinition.ValidLogin.user_enter_Address_info()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User view the Add Adress page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinition.ValidLogin.user_view_the_Add_Adress_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Add Button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinition.ValidLogin.click_on_Save_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Clice on Save Button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinition.ValidLogin.clice_on_Save_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "close browser",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinition.ValidLogin.close_browser()"
+  "location": "stepDefinition.UpsRefrenceStep.user_closed_browser()"
 });
 formatter.result({
   "status": "passed"

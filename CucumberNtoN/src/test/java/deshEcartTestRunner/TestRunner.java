@@ -8,10 +8,12 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions
          (
-        	features=".//Features/Customers.feature",	
-        	glue = "stepDefinition",
+        	features=".//Features/UpsRefrence.feature",	
+        	glue = {"stepDefinition"},
         	dryRun = false,
-        	monochrome = true,
+        	tags = {"@TC0004"},
+        	strict = true,
+        	monochrome = true,        	
         	plugin = {"pretty","html:Test-Output"}      
         		 
          )

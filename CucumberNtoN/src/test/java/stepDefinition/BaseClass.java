@@ -5,12 +5,13 @@ import org.openqa.selenium.WebDriver;
 
 import pageObject.LoginPageObject;
 import pageObject.NewCustomerPageObject;
+import pageObject.UpsRefrencePage;
 
 public class BaseClass {
 	public WebDriver driver;
 	public LoginPageObject lp;
 	public NewCustomerPageObject addcust;
-	
+	public UpsRefrencePage rp;
 	//Creating randomString for unique email
 	public static String randomestring() {
 		String generatedString1 = RandomStringUtils.randomAlphabetic(5);
