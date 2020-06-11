@@ -102,7 +102,7 @@ public class UpsRefrenceStep extends BaseClass {
 		Select select = new Select(rp.clickDest());
 		List<WebElement> alloptions = select.getOptions();
 		for (int i = 0; i < alloptions.size(); i++) {
-			if (alloptions.get(i).equals("Bangladesh")) {
+			if (alloptions.get(i).getText().equals("Bangladesh")) {
 				found = true;
 				break;
 			}

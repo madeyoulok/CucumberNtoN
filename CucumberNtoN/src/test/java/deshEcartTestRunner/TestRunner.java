@@ -11,8 +11,8 @@ import io.cucumber.junit.CucumberOptions;
         	features=".//Features/UpsRefrence.feature",	
         	glue = {"stepDefinition"},
         	dryRun = false,
-        	tags = {"@TC0004"},
         	strict = true,
+        	tags = {"@TC0005"},
         	monochrome = true,        	
         	plugin = {"pretty","html:Test-Output"}      
         		 

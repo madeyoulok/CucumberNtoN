@@ -60,15 +60,15 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Print the Country Destination List",
+  "name": "Verify Bangladesh is in the list of Destination Country",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@TC0004"
+      "name": "@TC0005"
     },
     {
-      "name": "@Regression"
+      "name": "@Smoke"
     }
   ]
 });
@@ -83,11 +83,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User should see all the country listed",
+  "name": "User should see Bangladesh on the dropdown list",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinition.UpsRefrenceStep.user_should_see_all_the_country_listed()"
+  "location": "stepDefinition.UpsRefrenceStep.user_should_see_Bangladesh_on_the_dropdown_list()"
 });
 formatter.result({
   "status": "passed"
