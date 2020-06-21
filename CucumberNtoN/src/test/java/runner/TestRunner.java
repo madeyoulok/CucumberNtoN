@@ -6,16 +6,21 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
-//@RunWith(Cucumber.class)
+@RunWith(Cucumber.class)
 @CucumberOptions
          (
-        	features=".//Features/UpsRefrence.feature",	
-        	glue = {"stepDefinition"}      	      	
+        	features=".//Features/simplifeyeLogin.feature",	
+        	glue = "stepDefinition",
+        	strict = true,
+        	monochrome = true,
+        	plugin= {"pretty", "html:target/cucumber"}
+        	
+        	
         	     
         		 
          )
 
-public class TestRunner extends AbstractTestNGCucumberTests{
+public class TestRunner {
 
 }
 
