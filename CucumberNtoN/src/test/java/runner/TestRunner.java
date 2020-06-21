@@ -9,7 +9,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @RunWith(Cucumber.class)
 @CucumberOptions
          (
-        	features=".//Features/simplifeyeLogin.feature",	
+        	features=".//Features/UpsRefrence.feature",	
         	glue = "stepDefinition",
         	strict = true,
         	monochrome = true,
