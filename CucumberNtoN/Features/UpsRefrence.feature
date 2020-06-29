@@ -8,7 +8,7 @@ And User click on Tracking
 And User click on Track and History
 And User click on Track by Reference
 
-@TC0001 @Smoke
+@TC0001 @Regression
 Scenario: Track by Freight Shipment type
 When User select Freight 
 Then Freight should be selected
@@ -20,13 +20,13 @@ When User select Mail Innovation
 Then Mail Innovation should be selected
 And User closed browser
 
-@TC0003 @Smoke
+@TC0003 @Regression
 Scenario: Track by  Package Shipment type
 When User select Package 
 Then Package should be selected
 And User closed browser
 
-@TC0004	@Regression
+@TC0004	@Smoke
 Scenario: Print the Country Destination List
 When User select Destination Country or Territory
 Then User should see all the country listed
